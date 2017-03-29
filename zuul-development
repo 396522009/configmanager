@@ -1,0 +1,24 @@
+eureka:
+  client: 
+   service-url: 
+    defautZone: http://enrekaserver/eureka/
+    instance:
+     preferIpAddress: true
+management: 
+  security:
+    enabled: false
+server: 
+  port: 8082
+spring: 
+  rabbitmq: 
+    addresses: amqp://192.168.33.28:5672
+    username: admin
+    password: admin123
+zuul:
+  routes:
+    baidu:
+     path: /baidu/**
+     url: http://www.baidu.com
+    index: 
+     path: /index/**
+     url: forward:/homes

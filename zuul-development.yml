@@ -14,6 +14,7 @@ spring:
     addresses: amqp://192.168.33.28:5672
     username: admin
     password: admin123
+#这是第一种方式
 zuul:
   routes:
     baidu:
@@ -22,6 +23,15 @@ zuul:
     index: 
      path: /index/**
      url: forward:/homes
+#这是第二种方式
+#zuul:
+#  routes:
+#    baidu:
+#     path: /baidu/**
+#     serviceId: 服务名称
+#    index: 
+#     path: /index/**
+#     serviceId: 服务名称
 cloud:
  sample:
   msg: web-devolopment-st-gt-yt-ht-sh-qy-mq-mqq-sn-HE-ft-zuul
